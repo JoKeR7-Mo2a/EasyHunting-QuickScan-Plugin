@@ -1,19 +1,5 @@
 <script setup lang="ts">
 import Card from 'primevue/card';
-
-// Handle external link opening
-const openExternalLink = (url: string) => {
-	// Try different methods to open external link
-	if (window.open) {
-		const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-		if (newWindow) {
-			newWindow.opener = null;
-		}
-	} else {
-		// Fallback for environments that don't support window.open
-		window.location.href = url;
-	}
-};
 </script>
 
 <template>
