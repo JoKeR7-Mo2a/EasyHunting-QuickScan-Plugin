@@ -264,6 +264,8 @@ const removeExtraArg = (index: number) => {
 	const allArgs = allExtraArgs.value;
 	const argToRemove = allArgs[index];
 
+	if (!argToRemove) return;
+
 	if (argToRemove.isCustom) {
 		// Remove from custom args
 		const customIndex = customExtraArgs.value.findIndex(arg => arg === argToRemove);
@@ -330,7 +332,7 @@ const handleAddScan = async () => {
 		console.log('Adding scan with data:', scanData);
 		const result = await easyHuntingApi.addScan(scanData);
 
-		if (result.status === 'added' || result.status === 'success') {
+		if (result.status === 'success') {
 			console.log('Scan added successfully:', result.message);
 			handleClose();
 		} else {
@@ -344,11 +346,11 @@ const handleAddScan = async () => {
 	}
 }; // Setup event listeners
 onMounted(() => {
-	document.addEventListener('showAddScanDialog', handleShowDialog as EventListener);
+	document.addEventListener('showAddScanDialog', handleShowDialog as unknown as EventListener);
 });
 
 onUnmounted(() => {
-	document.removeEventListener('showAddScanDialog', handleShowDialog as EventListener);
+	document.removeEventListener('showAddScanDialog', handleShowDialog as unknown as EventListener);
 });
 </script>
 

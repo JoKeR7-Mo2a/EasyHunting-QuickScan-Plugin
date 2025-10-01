@@ -3,8 +3,6 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import Card from 'primevue/card';
 import Dropdown from 'primevue/dropdown';
 import Button from 'primevue/button';
-import Message from 'primevue/message';
-import ProgressSpinner from 'primevue/progressspinner';
 import Badge from 'primevue/badge';
 import { easyHuntingApi, type Target } from '../services/EasyHuntingApi';
 
@@ -66,18 +64,7 @@ const setCurrentTarget = (target: Target | null) => {
 	}
 };
 
-// Clear current target
-const clearCurrentTarget = () => {
-	easyHuntingApi.clearCurrentTarget();
-	currentTarget.value = null;
-	selectedTarget.value = null;
-	successMessage.value = 'Current target cleared';
 
-	// Clear success message after 3 seconds
-	setTimeout(() => {
-		successMessage.value = '';
-	}, 3000);
-};
 
 // Format target for dropdown display
 const formatTargetForDropdown = (target: Target) => {
@@ -196,7 +183,7 @@ onUnmounted(() => {
 							:options="targets.map(formatTargetForDropdown)"
 							optionLabel="label"
 							optionValue="value"
-							:optionDisabled="option => option.disabled"
+							:optionDisabled="(option: any) => option.disabled"
 							placeholder="Choose a target..."
 							class="w-full"
 							:disabled="isLoading"
