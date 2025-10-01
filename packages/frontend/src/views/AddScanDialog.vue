@@ -332,7 +332,7 @@ const handleAddScan = async () => {
 		console.log('Adding scan with data:', scanData);
 		const result = await easyHuntingApi.addScan(scanData);
 
-		if (result.status === 'success') {
+		if (result.status === 'added' || result.status === 'success') {
 			console.log('Scan added successfully:', result.message);
 			handleClose();
 		} else {
