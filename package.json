@@ -4,7 +4,7 @@
 	"private": false,
 	"scripts": {
 		"typecheck": "pnpm -r typecheck",
-		"lint": "eslint ./packages/**/src --fix",
+		"lint": "eslint ./packages/**/src --fix --max-warnings=1000",
 		"build": "caido-dev build",
 		"watch": "caido-dev watch"
 	},
