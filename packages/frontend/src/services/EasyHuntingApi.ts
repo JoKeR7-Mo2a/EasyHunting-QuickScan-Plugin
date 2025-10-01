@@ -73,6 +73,13 @@ export interface AddScanRequest {
 	};
 }
 
+export interface AddScanResponse {
+	status: 'added' | 'success' | 'failed';
+	message?: string;
+	scanId?: string;
+	error?: string;
+}
+
 // EasyHunting API configuration
 const EASYHUNTING_API_BASE = 'https://api.easyhunting.app/api';
 
@@ -416,7 +423,7 @@ class EasyHuntingApiService {
 	/**
 	 * Add scan to EasyHunting
 	 */
-	async addScan(scanData: AddScanRequest): Promise<ApiResponse> {
+	async addScan(scanData: AddScanRequest): Promise<AddScanResponse> {
 		try {
 			const token = this.getAuthToken();
 
