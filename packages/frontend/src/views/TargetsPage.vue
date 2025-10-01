@@ -64,8 +64,6 @@ const setCurrentTarget = (target: Target | null) => {
 	}
 };
 
-
-
 // Format target for dropdown display
 const formatTargetForDropdown = (target: Target) => {
 	const targetName = target.TargetName || 'Unnamed Target';
