@@ -2,6 +2,8 @@
 
 A Caido plugin that integrates with the EasyHunting security scanning platform, allowing users to launch security scans directly from within Caido.
 
+<img width="2558" height="1358" alt="image" src="https://github.com/user-attachments/assets/6b648b0e-0485-446d-9441-86145d2170cc" />
+
 ## ⚠️ Important Disclosures
 
 This plugin requires the following external dependencies and services:
@@ -34,14 +36,6 @@ This plugin requires the following external dependencies and services:
 - Embeds YouTube videos for tutorial content
 - Links to external documentation and resources
 
-## Features
-
-- **Target Management**: Select and manage scan targets from Caido's project data
-- **Tool Integration**: Access to 50+ security scanning tools through EasyHunting platform
-- **Real-time Results**: View scan progress and results within Caido interface
-- **Video Tutorials**: Embedded instructional content for platform usage
-- **Seamless Workflow**: Launch scans without leaving Caido environment
-
 ## Installation & Setup
 
 1. Install the plugin through Caido's plugin store
@@ -51,13 +45,27 @@ This plugin requires the following external dependencies and services:
 
 ## Usage
 
-1. **Authentication**: Enter your EasyHunting credentials in the Authentication tab
-2. **Target Selection**: Choose targets from your Caido project in the Targets tab
-3. **Tool Selection**: Browse available security tools in the Tools tab
-4. **Scan Execution**: Configure and launch scans directly from the interface
-5. **Results**: View scan progress and results within Caido
+Follow these simple steps to integrate Caido with EasyHunting platform for comprehensive security scanning:
 
-## Data & Privacy
+1. **Authentication**: Log in with your EasyHunting credentials to establish a secure connection
+
+2. **Target Selection**: Select targets from your EasyHunting dashboard for comprehensive scanning
+
+3. **Select Input for Scanning**: Select the input you want to scan, right-click and choose "EasyHunting QuickScan" from the plugin menu, then select the tool you want to use for scanning
+
+4. **Scan Execution**: The scan will be automatically added to your EasyHunting platform. Now open the EasyHunting program, select the new scans that have been added, and start the scanning process
+
+5. **Results & Analysis**: View detailed results and analysis in your EasyHunting dashboard
+
+## Video Tutorial
+
+Watch this comprehensive step-by-step video tutorial to see exactly how the EasyHunting QuickScan Plugin integrates with Caido:
+
+[![EasyHunting QuickScan Plugin - How It Works](https://img.youtube.com/vi/p5w1SBfoErI/maxresdefault.jpg)](https://www.youtube.com/watch?v=p5w1SBfoErI)
+
+**[🎥 Watch Tutorial Video](https://www.youtube.com/watch?v=p5w1SBfoErI)**
+
+_This video demonstrates the complete workflow from authentication to scan results analysis._
 
 ### Data Collection
 
@@ -87,12 +95,6 @@ This plugin integrates with the following external services:
 - **Website**: [easyhunting.app](https://easyhunting.app)
 - **Data Shared**: Target URLs, scan parameters, authentication credentials
 - **Privacy Policy**: [EasyHunting Privacy Policy](https://easyhunting.app/privacy)
-
-### YouTube
-
-- **Purpose**: Embedded tutorial videos
-- **Data Shared**: None (iframe embed only)
-- **Privacy Policy**: [YouTube Privacy Policy](https://policies.google.com/privacy)
 
 ## License
 
